@@ -446,6 +446,18 @@ LIBRARY_EXPORT int LVGetMethodFullName(MethodDescriptor* method, grpc_labview::L
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
+LIBRARY_EXPORT int LVGetMethodOptions(MethodDescriptor* method, grpc_labview::LStrHandle* DebugString)
+{
+    if (method == nullptr)
+    {
+        return -1;
+    }
+    grpc_labview::SetLVString(DebugString, method->options().DebugString());
+    return 0;
+}
+
+//---------------------------------------------------------------------
+//---------------------------------------------------------------------
 LIBRARY_EXPORT int LVIsMethodClientStreaming(MethodDescriptor* method, int* clientStreaming)
 {
     if (method == nullptr)
