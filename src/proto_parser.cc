@@ -446,13 +446,13 @@ LIBRARY_EXPORT int LVGetMethodFullName(MethodDescriptor* method, grpc_labview::L
 
 //---------------------------------------------------------------------
 //---------------------------------------------------------------------
-LIBRARY_EXPORT int LVGetMethodOptions(MethodDescriptor* method, grpc_labview::LStrHandle* DebugString)
+LIBRARY_EXPORT int LVGetMethodOptionsDebugString(MethodDescriptor* method, grpc_labview::LStrHandle* debugString)
 {
     if (method == nullptr)
     {
         return -1;
     }
-    grpc_labview::SetLVString(DebugString, method->options().DebugString());
+    grpc_labview::SetLVString(debugString, method->options().DebugString());
     return 0;
 }
 

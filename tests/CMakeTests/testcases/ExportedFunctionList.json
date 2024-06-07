@@ -512,6 +512,15 @@
       ]
     },
     {
+      "id": 85,
+      "function_name": "LVGetMethodOptionsDebugString",
+      "return_type": "int",
+      "parameter_list": [
+        "MethodDescriptor*",
+        "grpc_labview::LStrHandle*"
+      ]
+    },
+    {
       "id": 52,
       "function_name": "LVGetMethodInput",
       "return_type": "int",
